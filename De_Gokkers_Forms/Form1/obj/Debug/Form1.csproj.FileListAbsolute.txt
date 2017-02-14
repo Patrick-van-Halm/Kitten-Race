@@ -1,2 +1,9 @@
 c:\users\patrick\documents\visual studio 2015\Projects\De_Gokkers_Forms\Form1\bin\Debug\Form1.exe.config
 D:\Kitten-Race\Kitten-Race\De_Gokkers_Forms\Form1\bin\Debug\Form1.exe.config
+C:\Users\Patrick\Documents\MEGA\Periode_3\SP\De_Gokkers\Github\Kitten-Race\De_Gokkers_Forms\Form1\bin\Debug\Form1.exe.config
+C:\Users\Patrick\Documents\MEGA\Periode_3\SP\De_Gokkers\Github\Kitten-Race\De_Gokkers_Forms\Form1\bin\Debug\Form1.exe
+C:\Users\Patrick\Documents\MEGA\Periode_3\SP\De_Gokkers\Github\Kitten-Race\De_Gokkers_Forms\Form1\bin\Debug\Form1.pdb
+C:\Users\Patrick\Documents\MEGA\Periode_3\SP\De_Gokkers\Github\Kitten-Race\De_Gokkers_Forms\Form1\obj\Debug\Form1.Properties.Resources.resources
+C:\Users\Patrick\Documents\MEGA\Periode_3\SP\De_Gokkers\Github\Kitten-Race\De_Gokkers_Forms\Form1\obj\Debug\Form1.csproj.GenerateResource.Cache
+C:\Users\Patrick\Documents\MEGA\Periode_3\SP\De_Gokkers\Github\Kitten-Race\De_Gokkers_Forms\Form1\obj\Debug\Form1.exe
+C:\Users\Patrick\Documents\MEGA\Periode_3\SP\De_Gokkers\Github\Kitten-Race\De_Gokkers_Forms\Form1\obj\Debug\Form1.pdb
