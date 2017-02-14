@@ -1,1 +1,2 @@
 c:\users\patrick\documents\visual studio 2015\Projects\De_Gokkers_Forms\Form1\bin\Debug\Form1.exe.config
+C:\Users\Patrick\Documents\MEGA\Periode_3\SP\De_Gokkers\Github\Kitten-Race\De_Gokkers_Forms\Form1\bin\Debug\Form1.exe.config
