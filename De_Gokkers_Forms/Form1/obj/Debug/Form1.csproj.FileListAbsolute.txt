@@ -7,3 +7,5 @@ C:\Users\Patrick\Documents\MEGA\Periode_3\SP\De_Gokkers\Github\Kitten-Race\De_Go
 C:\Users\Patrick\Documents\MEGA\Periode_3\SP\De_Gokkers\Github\Kitten-Race\De_Gokkers_Forms\Form1\obj\Debug\Form1.csproj.GenerateResource.Cache
 C:\Users\Patrick\Documents\MEGA\Periode_3\SP\De_Gokkers\Github\Kitten-Race\De_Gokkers_Forms\Form1\obj\Debug\Form1.exe
 C:\Users\Patrick\Documents\MEGA\Periode_3\SP\De_Gokkers\Github\Kitten-Race\De_Gokkers_Forms\Form1\obj\Debug\Form1.pdb
+C:\Users\Patrick\Documents\MEGA\Periode_3\SP\De_Gokkers\Github\Kitten-Race\De_Gokkers_Forms\Form1\obj\Debug\Form1.Form1.resources
+C:\Users\Patrick\Documents\MEGA\Periode_3\SP\De_Gokkers\Github\Kitten-Race\De_Gokkers_Forms\Form1\obj\Debug\Form1.csprojResolveAssemblyReference.cache
