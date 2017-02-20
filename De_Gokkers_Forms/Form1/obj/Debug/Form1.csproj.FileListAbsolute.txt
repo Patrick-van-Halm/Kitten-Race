@@ -9,3 +9,12 @@ C:\Users\Patrick\Documents\MEGA\Periode_3\SP\De_Gokkers\Github\Kitten-Race\De_Go
 C:\Users\Patrick\Documents\MEGA\Periode_3\SP\De_Gokkers\Github\Kitten-Race\De_Gokkers_Forms\Form1\obj\Debug\Form1.pdb
 C:\Users\Patrick\Documents\MEGA\Periode_3\SP\De_Gokkers\Github\Kitten-Race\De_Gokkers_Forms\Form1\obj\Debug\Form1.Form1.resources
 C:\Users\Patrick\Documents\MEGA\Periode_3\SP\De_Gokkers\Github\Kitten-Race\De_Gokkers_Forms\Form1\obj\Debug\Form1.csprojResolveAssemblyReference.cache
+C:\Users\School\Documents\school\leerjaar_1\Periode_3\projecten\kitten\Kitten-Race\De_Gokkers_Forms\Form1\bin\Debug\Form1.exe.config
+C:\Users\School\Documents\school\leerjaar_1\Periode_3\projecten\kitten\Kitten-Race\De_Gokkers_Forms\Form1\obj\Debug\Form1.exe
+C:\Users\School\Documents\school\leerjaar_1\Periode_3\projecten\kitten\Kitten-Race\De_Gokkers_Forms\Form1\obj\Debug\Form1.pdb
+C:\Users\School\Documents\school\leerjaar_1\Periode_3\projecten\kitten\Kitten-Race\De_Gokkers_Forms\Form1\bin\Debug\Form1.exe
+C:\Users\School\Documents\school\leerjaar_1\Periode_3\projecten\kitten\Kitten-Race\De_Gokkers_Forms\Form1\bin\Debug\Form1.pdb
+C:\Users\School\Documents\school\leerjaar_1\Periode_3\projecten\kitten\Kitten-Race\De_Gokkers_Forms\Form1\obj\Debug\Form1.csprojResolveAssemblyReference.cache
+C:\Users\School\Documents\school\leerjaar_1\Periode_3\projecten\kitten\Kitten-Race\De_Gokkers_Forms\Form1\obj\Debug\Form1.Form1.resources
+C:\Users\School\Documents\school\leerjaar_1\Periode_3\projecten\kitten\Kitten-Race\De_Gokkers_Forms\Form1\obj\Debug\Form1.Properties.Resources.resources
+C:\Users\School\Documents\school\leerjaar_1\Periode_3\projecten\kitten\Kitten-Race\De_Gokkers_Forms\Form1\obj\Debug\Form1.csproj.GenerateResource.Cache

@@ -21,5 +21,10 @@ namespace Form1
         {
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            this.MaximumSize = new Size(1000,1200);
+        }
     }
 }
