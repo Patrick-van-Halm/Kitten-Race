@@ -30,18 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.WedtPanel = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.domainUpDown2 = new System.Windows.Forms.DomainUpDown();
+            this.ColorChoose = new System.Windows.Forms.NumericUpDown();
+            this.BedMoney = new System.Windows.Forms.NumericUpDown();
+            this.go = new System.Windows.Forms.Button();
+            this.wedt = new System.Windows.Forms.Button();
+            this.ColorBox = new System.Windows.Forms.PictureBox();
+            this.MoneyBedLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.domainUpDown1 = new System.Windows.Forms.DomainUpDown();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.playerlabel3 = new System.Windows.Forms.Label();
+            this.playerlabel2 = new System.Windows.Forms.Label();
+            this.playerlabel1 = new System.Windows.Forms.Label();
+            this.playerRadio2 = new System.Windows.Forms.RadioButton();
+            this.playerRadio3 = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.playerRadio1 = new System.Windows.Forms.RadioButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -49,7 +51,9 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.WedtPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ColorChoose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BedMoney)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ColorBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -63,52 +67,102 @@
             this.WedtPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.WedtPanel.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.WedtPanel.Controls.Add(this.pictureBox2);
-            this.WedtPanel.Controls.Add(this.label6);
-            this.WedtPanel.Controls.Add(this.domainUpDown2);
+            this.WedtPanel.Controls.Add(this.ColorChoose);
+            this.WedtPanel.Controls.Add(this.BedMoney);
+            this.WedtPanel.Controls.Add(this.go);
+            this.WedtPanel.Controls.Add(this.wedt);
+            this.WedtPanel.Controls.Add(this.ColorBox);
+            this.WedtPanel.Controls.Add(this.MoneyBedLabel);
             this.WedtPanel.Controls.Add(this.label5);
-            this.WedtPanel.Controls.Add(this.domainUpDown1);
-            this.WedtPanel.Controls.Add(this.label4);
-            this.WedtPanel.Controls.Add(this.label3);
-            this.WedtPanel.Controls.Add(this.label2);
-            this.WedtPanel.Controls.Add(this.radioButton3);
-            this.WedtPanel.Controls.Add(this.radioButton2);
+            this.WedtPanel.Controls.Add(this.playerlabel3);
+            this.WedtPanel.Controls.Add(this.playerlabel2);
+            this.WedtPanel.Controls.Add(this.playerlabel1);
+            this.WedtPanel.Controls.Add(this.playerRadio2);
+            this.WedtPanel.Controls.Add(this.playerRadio3);
             this.WedtPanel.Controls.Add(this.label1);
-            this.WedtPanel.Controls.Add(this.radioButton1);
+            this.WedtPanel.Controls.Add(this.playerRadio1);
             this.WedtPanel.Location = new System.Drawing.Point(0, 0);
             this.WedtPanel.Name = "WedtPanel";
-            this.WedtPanel.Size = new System.Drawing.Size(251, 793);
+            this.WedtPanel.Size = new System.Drawing.Size(251, 743);
             this.WedtPanel.TabIndex = 0;
             // 
-            // pictureBox2
+            // ColorChoose
             // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.WindowText;
-            this.pictureBox2.Location = new System.Drawing.Point(36, 169);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(191, 47);
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
+            this.ColorChoose.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
+            this.ColorChoose.Location = new System.Drawing.Point(12, 180);
+            this.ColorChoose.Maximum = new decimal(new int[] {
+            6,
+            0,
+            0,
+            0});
+            this.ColorChoose.Name = "ColorChoose";
+            this.ColorChoose.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ColorChoose.Size = new System.Drawing.Size(18, 47);
+            this.ColorChoose.TabIndex = 16;
+            this.ColorChoose.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.ColorChoose.ValueChanged += new System.EventHandler(this.ColorChoose_ValueChanged);
             // 
-            // label6
+            // BedMoney
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(89, 335);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 42);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "10";
+            this.BedMoney.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
+            this.BedMoney.Location = new System.Drawing.Point(12, 335);
+            this.BedMoney.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.BedMoney.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.BedMoney.Name = "BedMoney";
+            this.BedMoney.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.BedMoney.Size = new System.Drawing.Size(18, 47);
+            this.BedMoney.TabIndex = 15;
+            this.BedMoney.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
-            // domainUpDown2
+            // go
             // 
-            this.domainUpDown2.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.domainUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.domainUpDown2.Location = new System.Drawing.Point(8, 330);
-            this.domainUpDown2.Name = "domainUpDown2";
-            this.domainUpDown2.ReadOnly = true;
-            this.domainUpDown2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.domainUpDown2.Size = new System.Drawing.Size(18, 47);
-            this.domainUpDown2.TabIndex = 10;
+            this.go.Location = new System.Drawing.Point(83, 497);
+            this.go.Name = "go";
+            this.go.Size = new System.Drawing.Size(75, 23);
+            this.go.TabIndex = 14;
+            this.go.Text = "GO";
+            this.go.UseVisualStyleBackColor = true;
+            // 
+            // wedt
+            // 
+            this.wedt.Location = new System.Drawing.Point(83, 454);
+            this.wedt.Name = "wedt";
+            this.wedt.Size = new System.Drawing.Size(75, 23);
+            this.wedt.TabIndex = 13;
+            this.wedt.Text = "WEDT";
+            this.wedt.UseVisualStyleBackColor = true;
+            this.wedt.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // ColorBox
+            // 
+            this.ColorBox.BackColor = System.Drawing.SystemColors.WindowText;
+            this.ColorBox.Location = new System.Drawing.Point(36, 180);
+            this.ColorBox.Name = "ColorBox";
+            this.ColorBox.Size = new System.Drawing.Size(191, 47);
+            this.ColorBox.TabIndex = 12;
+            this.ColorBox.TabStop = false;
+            // 
+            // MoneyBedLabel
+            // 
+            this.MoneyBedLabel.AutoSize = true;
+            this.MoneyBedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MoneyBedLabel.Location = new System.Drawing.Point(89, 335);
+            this.MoneyBedLabel.Name = "MoneyBedLabel";
+            this.MoneyBedLabel.Size = new System.Drawing.Size(60, 42);
+            this.MoneyBedLabel.TabIndex = 11;
+            this.MoneyBedLabel.Text = "10";
             // 
             // label5
             // 
@@ -120,65 +174,54 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Minimal 5. Maximal 15";
             // 
-            // domainUpDown1
+            // playerlabel3
             // 
-            this.domainUpDown1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.domainUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.domainUpDown1.Location = new System.Drawing.Point(8, 169);
-            this.domainUpDown1.Name = "domainUpDown1";
-            this.domainUpDown1.ReadOnly = true;
-            this.domainUpDown1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.domainUpDown1.Size = new System.Drawing.Size(18, 47);
-            this.domainUpDown1.TabIndex = 8;
+            this.playerlabel3.AutoSize = true;
+            this.playerlabel3.Location = new System.Drawing.Point(33, 132);
+            this.playerlabel3.Name = "playerlabel3";
+            this.playerlabel3.Size = new System.Drawing.Size(35, 13);
+            this.playerlabel3.TabIndex = 6;
+            this.playerlabel3.Text = "label4";
             // 
-            // label4
+            // playerlabel2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(33, 107);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "label4";
+            this.playerlabel2.AutoSize = true;
+            this.playerlabel2.Location = new System.Drawing.Point(33, 100);
+            this.playerlabel2.Name = "playerlabel2";
+            this.playerlabel2.Size = new System.Drawing.Size(35, 13);
+            this.playerlabel2.TabIndex = 5;
+            this.playerlabel2.Text = "label3";
             // 
-            // label3
+            // playerlabel1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 87);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "label3";
+            this.playerlabel1.AutoSize = true;
+            this.playerlabel1.Location = new System.Drawing.Point(33, 68);
+            this.playerlabel1.Name = "playerlabel1";
+            this.playerlabel1.Size = new System.Drawing.Size(35, 13);
+            this.playerlabel1.TabIndex = 4;
+            this.playerlabel1.Text = "label2";
             // 
-            // label2
+            // playerRadio2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 68);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "label2";
+            this.playerRadio2.AutoSize = true;
+            this.playerRadio2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playerRadio2.Location = new System.Drawing.Point(12, 100);
+            this.playerRadio2.Name = "playerRadio2";
+            this.playerRadio2.Size = new System.Drawing.Size(14, 13);
+            this.playerRadio2.TabIndex = 3;
+            this.playerRadio2.TabStop = true;
+            this.playerRadio2.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // playerRadio3
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.Location = new System.Drawing.Point(12, 87);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(14, 13);
-            this.radioButton3.TabIndex = 3;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.radioButton2.Location = new System.Drawing.Point(12, 106);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(14, 13);
-            this.radioButton2.TabIndex = 2;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.playerRadio3.AutoSize = true;
+            this.playerRadio3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.playerRadio3.Location = new System.Drawing.Point(12, 131);
+            this.playerRadio3.Name = "playerRadio3";
+            this.playerRadio3.Size = new System.Drawing.Size(14, 13);
+            this.playerRadio3.TabIndex = 2;
+            this.playerRadio3.TabStop = true;
+            this.playerRadio3.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -189,17 +232,18 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "RONDE WIN:";
             // 
-            // radioButton1
+            // playerRadio1
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(12, 68);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(14, 13);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.playerRadio1.AutoSize = true;
+            this.playerRadio1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playerRadio1.Location = new System.Drawing.Point(12, 68);
+            this.playerRadio1.Name = "playerRadio1";
+            this.playerRadio1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.playerRadio1.Size = new System.Drawing.Size(14, 13);
+            this.playerRadio1.TabIndex = 0;
+            this.playerRadio1.TabStop = true;
+            this.playerRadio1.UseVisualStyleBackColor = true;
+            this.playerRadio1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // pictureBox1
             // 
@@ -265,7 +309,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(844, 791);
+            this.ClientSize = new System.Drawing.Size(844, 741);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
@@ -282,7 +326,9 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.WedtPanel.ResumeLayout(false);
             this.WedtPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ColorChoose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BedMoney)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ColorBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -298,23 +344,25 @@
 
         private System.Windows.Forms.Panel WedtPanel;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton playerRadio1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DomainUpDown domainUpDown1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.Label playerlabel3;
+        private System.Windows.Forms.Label playerlabel2;
+        private System.Windows.Forms.Label playerlabel1;
+        private System.Windows.Forms.RadioButton playerRadio2;
+        private System.Windows.Forms.RadioButton playerRadio3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DomainUpDown domainUpDown2;
+        private System.Windows.Forms.PictureBox ColorBox;
+        private System.Windows.Forms.Label MoneyBedLabel;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Button go;
+        private System.Windows.Forms.Button wedt;
+        private System.Windows.Forms.NumericUpDown BedMoney;
+        private System.Windows.Forms.NumericUpDown ColorChoose;
     }
 }
 

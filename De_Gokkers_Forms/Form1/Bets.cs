@@ -10,15 +10,18 @@ namespace Form1
     {
         protected int bet;
         protected int kitten;
+        protected int money;
 
-        public Bets()
+        public Bets(int money)
         {
+            this.money = money;
         }
 
         public void Bet(int bet, int kitten)
         {
             this.bet = bet;
             this.kitten = kitten;
+            this.money -= bet;
         }
 
         public int GetBet()

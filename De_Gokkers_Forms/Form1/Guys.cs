@@ -9,12 +9,10 @@ namespace Form1
     class Guys : Bets
     {
         string name;
-        int money;
 
-        public Guys(string name, int money = 50) : base()
+        public Guys(string name, int money = 50) : base(money)
         {
             this.name = name;
-            this.money = money;
         }
 
         //Methods
@@ -26,7 +24,7 @@ namespace Form1
 
         public int GetMoney()
         {
-            return this.money;
+            return money;
         }
     }
 }
