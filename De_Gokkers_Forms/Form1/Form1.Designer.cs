@@ -100,7 +100,7 @@
             this.ColorChoose.Size = new System.Drawing.Size(18, 47);
             this.ColorChoose.TabIndex = 16;
             this.ColorChoose.Value = new decimal(new int[] {
-            1,
+            5,
             0,
             0,
             0});
@@ -310,7 +310,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1596, 741);
+            this.ClientSize = new System.Drawing.Size(1362, 741);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);

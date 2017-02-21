@@ -14,15 +14,18 @@ namespace Form1
     public partial class Form1 : Form
     {
         List<Cat> cat = new List<Cat>();
+        
+
 
         int moneyBed = 5;
         int color = 1;
         int amountCats = 5;
         int count = 0;
 
-         Guys player1;
+        Guys player1;
         Guys player2;
         Guys player3;
+        Guys[] Guylist = new Guys[3];
 
         bool player1bet = false;
         bool player2bet = false;
@@ -42,11 +45,15 @@ namespace Form1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            label1.Text = "";
             MoneyBedLabel.Text = "" + moneyBed;
-            ColorBox.BackColor = Color.FromArgb(249, 79, 139);
+            ColorBox.BackColor = Color.FromArgb(115, 225, 223);
             player1 = new Guys("Sietse", 100);
             player2 = new Guys("Fer", 100);
             player3 = new Guys("Lidy", 100);
+            Guylist[0] = player1;
+            Guylist[1] = player2;
+            Guylist[2] = player3;
             playerlabel1.Text = player1.GetName() + " heeft: " + player1.GetMoney() + " euro in totaal.";
             playerlabel2.Text = player2.GetName() + " heeft: " + player2.GetMoney() + " euro in totaal.";
             playerlabel3.Text = player3.GetName() + " heeft: " + player3.GetMoney() + " euro in totaal.";
@@ -91,7 +98,7 @@ namespace Form1
                 ColorBox.BackColor = Color.FromArgb(79, 70, 245);
             else if (color == 5)
                 ColorBox.BackColor = Color.FromArgb(115, 225, 223);
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -121,6 +128,11 @@ namespace Form1
             int temp;
             do
             {
+                //Tot 1 persoon heeft gewedt kan het spel niet beginnen
+                if (!player1bet && !player2bet && !player3bet)
+                {
+                    break;
+                }
                 for (int i = 0; i < amountCats; i++)
                 {
 
@@ -262,23 +274,77 @@ namespace Form1
                 {
                     if (i == 0)
                     {
-                        pictureBox3.Hide();
+                        label1.Text = "Kat 1 heeft gewonnen";
+                        label1.BackColor = Color.FromArgb(115, 225, 223);
+                        for (int j = 0; j < Guylist.Length; j++) {
+                            if(Guylist[j].GetKitten() == 5)
+                            {
+                                Guylist[j].Win();
+                                playerlabel1.Text = player1.GetName() + " heeft: " + player1.GetMoney() + " euro in totaal.";
+                                playerlabel2.Text = player2.GetName() + " heeft: " + player2.GetMoney() + " euro in totaal.";
+                                playerlabel3.Text = player3.GetName() + " heeft: " + player3.GetMoney() + " euro in totaal.";
+                            }
+                        }
                     }
                     else if (i == 1)
                     {
-                        pictureBox4.Hide();
+                        label1.Text = "Kat 2 heeft gewonnen";
+                        label1.BackColor = Color.FromArgb(79, 70, 245);
+                        for (int j = 0; j < Guylist.Length; j++)
+                        {
+                            if (Guylist[j].GetKitten() == 4)
+                            {
+                                Guylist[j].Win();
+                                playerlabel1.Text = player1.GetName() + " heeft: " + player1.GetMoney() + " euro in totaal.";
+                                playerlabel2.Text = player2.GetName() + " heeft: " + player2.GetMoney() + " euro in totaal.";
+                                playerlabel3.Text = player3.GetName() + " heeft: " + player3.GetMoney() + " euro in totaal.";
+                            }
+                        }
                     }
                     else if (i == 2)
                     {
-                        pictureBox5.Hide();
+                        label1.Text = "Kat 3 heeft gewonnen";
+                        label1.BackColor = Color.FromArgb(255, 105, 100);
+                        for (int j = 0; j < Guylist.Length; j++)
+                        {
+                            if (Guylist[j].GetKitten() == 3)
+                            {
+                                Guylist[j].Win();
+                                playerlabel1.Text = player1.GetName() + " heeft: " + player1.GetMoney() + " euro in totaal.";
+                                playerlabel2.Text = player2.GetName() + " heeft: " + player2.GetMoney() + " euro in totaal.";
+                                playerlabel3.Text = player3.GetName() + " heeft: " + player3.GetMoney() + " euro in totaal.";
+                            }
+                        }
                     }
                     else if (i == 3)
                     {
-                        pictureBox6.Hide();
+                        label1.Text = "Kat 4 heeft gewonnen";
+                        label1.BackColor = Color.FromArgb(252, 159, 86);
+                        for (int j = 0; j < Guylist.Length; j++)
+                        {
+                            if (Guylist[j].GetKitten() == 2)
+                            {
+                                Guylist[j].Win();
+                                playerlabel1.Text = player1.GetName() + " heeft: " + player1.GetMoney() + " euro in totaal.";
+                                playerlabel2.Text = player2.GetName() + " heeft: " + player2.GetMoney() + " euro in totaal.";
+                                playerlabel3.Text = player3.GetName() + " heeft: " + player3.GetMoney() + " euro in totaal.";
+                            }
+                        }
                     }
                     else if (i == 4)
                     {
-                        pictureBox7.Hide();
+                        label1.Text = "Kat 5 heeft gewonnen";
+                        label1.BackColor = Color.FromArgb(245, 79, 139);
+                        for (int j = 0; j < Guylist.Length; j++)
+                        {
+                            if (Guylist[j].GetKitten() == 1)
+                            {
+                                Guylist[j].Win();
+                                playerlabel1.Text = player1.GetName() + " heeft: " + player1.GetMoney() + " euro in totaal.";
+                                playerlabel2.Text = player2.GetName() + " heeft: " + player2.GetMoney() + " euro in totaal.";
+                                playerlabel3.Text = player3.GetName() + " heeft: " + player3.GetMoney() + " euro in totaal.";
+                            }
+                        }
                     }
                 }
             }

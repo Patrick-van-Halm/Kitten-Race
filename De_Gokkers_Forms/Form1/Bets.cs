@@ -24,6 +24,11 @@ namespace Form1
             this.money -= bet;
         }
 
+        public void Win()
+        {
+            this.money += 2 * bet;
+        }
+
         public int GetBet()
         {
             return this.bet;
