@@ -134,6 +134,7 @@
             this.go.TabIndex = 14;
             this.go.Text = "GO";
             this.go.UseVisualStyleBackColor = true;
+            this.go.Click += new System.EventHandler(this.go_Click);
             // 
             // wedt
             // 
@@ -250,7 +251,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(246, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(600, 800);
+            this.pictureBox1.Size = new System.Drawing.Size(1350, 800);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -309,7 +310,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(844, 741);
+            this.ClientSize = new System.Drawing.Size(1596, 741);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);

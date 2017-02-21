@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace Form1
 {
@@ -16,7 +17,7 @@ namespace Form1
         }
         public int Moved()
         {
-            return rmd.Next(1, 25);
+            return rmd.Next(0, 25);
         }
     }
 }

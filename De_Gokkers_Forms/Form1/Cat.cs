@@ -8,18 +8,23 @@ namespace Form1
 {
     class Cat
     {
+        Move move = new Move();
+
+        private bool    won;
         private bool    isAlive;
         private bool    disqualified;
+        private bool    stop;
         private int     position;
         public Cat()
         {
             this.isAlive        = true;
             this.position       = 0;
             this.disqualified   = false;
+            this.stop           = false;
         }
-        public void Run(int distens)
+        public int Run()
         {
-            this.position += distens;
+            return this.position = this.move.Moved();
         }
         public int Fire(Cat[] Kittens)
         {
@@ -41,6 +46,14 @@ namespace Form1
             }
             return 0;
         }
+        public void Stop()
+        {
+            this.stop = true;
+        }
+        public void HasWon()
+        {
+            this.won = true;
+        }
         public bool GetIsAlive()
         {
             return this.isAlive;
@@ -53,9 +66,17 @@ namespace Form1
         {
             return this.disqualified;
         }
+        public bool GetStop()
+        {
+            return this.stop;
+        }
         public void SetIsAlive()
         {
             this.isAlive = false;
+        }
+        public bool GetHaveWon()
+        {
+            return this.won;
         }
     }
 }
