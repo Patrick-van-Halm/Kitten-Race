@@ -18,3 +18,5 @@ C:\Users\School\Documents\school\leerjaar_1\Periode_3\projecten\kitten\Kitten-Ra
 C:\Users\School\Documents\school\leerjaar_1\Periode_3\projecten\kitten\Kitten-Race\De_Gokkers_Forms\Form1\obj\Debug\Form1.Form1.resources
 C:\Users\School\Documents\school\leerjaar_1\Periode_3\projecten\kitten\Kitten-Race\De_Gokkers_Forms\Form1\obj\Debug\Form1.Properties.Resources.resources
 C:\Users\School\Documents\school\leerjaar_1\Periode_3\projecten\kitten\Kitten-Race\De_Gokkers_Forms\Form1\obj\Debug\Form1.csproj.GenerateResource.Cache
+D:\Kitten-Race\Kitten-Race\De_Gokkers_Forms\Form1\obj\Debug\Form1.exe
+D:\Kitten-Race\Kitten-Race\De_Gokkers_Forms\Form1\obj\Debug\Form1.pdb

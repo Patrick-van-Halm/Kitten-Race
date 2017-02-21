@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Form1
 {
-    class Kat
+    class Cat
     {
         private bool    isAlive;
         private bool    disqualified;
         private int     position;
-        public Kat()
+        public Cat()
         {
             this.isAlive        = true;
             this.position       = 0;
@@ -21,7 +21,7 @@ namespace Form1
         {
             this.position += distens;
         }
-        public int Fire(Kat[] Kittens)
+        public int Fire(Cat[] Kittens)
         {
             int temp = 0;
             for (int i = 0; i < Kittens.Length; i++)
