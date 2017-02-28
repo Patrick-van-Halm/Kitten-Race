@@ -83,7 +83,7 @@
             this.WedtPanel.Controls.Add(this.playerRadio1);
             this.WedtPanel.Location = new System.Drawing.Point(0, 0);
             this.WedtPanel.Name = "WedtPanel";
-            this.WedtPanel.Size = new System.Drawing.Size(251, 743);
+            this.WedtPanel.Size = new System.Drawing.Size(251, 800);
             this.WedtPanel.TabIndex = 0;
             // 
             // ColorChoose
@@ -310,6 +310,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1362, 741);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
@@ -318,12 +319,14 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.WedtPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "CAT-RACE";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.WedtPanel.ResumeLayout(false);
             this.WedtPanel.PerformLayout();

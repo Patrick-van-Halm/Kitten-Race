@@ -32,6 +32,7 @@ namespace Form1
         bool player3bet = false;
         bool done = false;
         bool firts = true;
+        bool noBet = false;
 
         public Form1()
         {
@@ -131,6 +132,7 @@ namespace Form1
                 //Tot 1 persoon heeft gewedt kan het spel niet beginnen
                 if (!player1bet && !player2bet && !player3bet)
                 {
+                    noBet = true;
                     break;
                 }
                 for (int i = 0; i < amountCats; i++)
@@ -267,85 +269,208 @@ namespace Form1
                 }
                 Application.DoEvents();
             } while (!done);
-            //label1.Text = "RONDE WIN:";
-            for (int i = 0; i < amountCats; i++)
+            while (!noBet)
             {
-                if (cat[i].GetHaveWon())
+                done = false;
+                count = 0;
+                //label1.Text = "RONDE WIN:";
+                for (int i = 0; i < amountCats; i++)
                 {
-                    if (i == 0)
+                    if (cat[i].GetHaveWon())
                     {
-                        label1.Text = "Kat 1 heeft gewonnen";
-                        label1.BackColor = Color.FromArgb(115, 225, 223);
-                        for (int j = 0; j < Guylist.Length; j++) {
-                            if(Guylist[j].GetKitten() == 5)
-                            {
-                                Guylist[j].Win();
-                                playerlabel1.Text = player1.GetName() + " heeft: " + player1.GetMoney() + " euro in totaal.";
-                                playerlabel2.Text = player2.GetName() + " heeft: " + player2.GetMoney() + " euro in totaal.";
-                                playerlabel3.Text = player3.GetName() + " heeft: " + player3.GetMoney() + " euro in totaal.";
-                            }
-                        }
-                    }
-                    else if (i == 1)
-                    {
-                        label1.Text = "Kat 2 heeft gewonnen";
-                        label1.BackColor = Color.FromArgb(79, 70, 245);
-                        for (int j = 0; j < Guylist.Length; j++)
+                        if (i == 0)
                         {
-                            if (Guylist[j].GetKitten() == 4)
+                            label1.Text = "Kat 1 heeft gewonnen";
+                            label1.BackColor = Color.FromArgb(115, 225, 223);
+                            for (int j = 0; j < Guylist.Length; j++)
                             {
-                                Guylist[j].Win();
-                                playerlabel1.Text = player1.GetName() + " heeft: " + player1.GetMoney() + " euro in totaal.";
-                                playerlabel2.Text = player2.GetName() + " heeft: " + player2.GetMoney() + " euro in totaal.";
-                                playerlabel3.Text = player3.GetName() + " heeft: " + player3.GetMoney() + " euro in totaal.";
+                                if (Guylist[j].GetKitten() == 5)
+                                {
+                                    Guylist[j].Win();
+                                    playerlabel1.Text = player1.GetName() + " heeft: " + player1.GetMoney() + " euro in totaal.";
+                                    playerlabel2.Text = player2.GetName() + " heeft: " + player2.GetMoney() + " euro in totaal.";
+                                    playerlabel3.Text = player3.GetName() + " heeft: " + player3.GetMoney() + " euro in totaal.";
+                                }
                             }
                         }
-                    }
-                    else if (i == 2)
-                    {
-                        label1.Text = "Kat 3 heeft gewonnen";
-                        label1.BackColor = Color.FromArgb(255, 105, 100);
-                        for (int j = 0; j < Guylist.Length; j++)
+                        else if (i == 1)
                         {
-                            if (Guylist[j].GetKitten() == 3)
+                            label1.Text = "Kat 2 heeft gewonnen";
+                            label1.BackColor = Color.FromArgb(79, 70, 245);
+                            for (int j = 0; j < Guylist.Length; j++)
                             {
-                                Guylist[j].Win();
-                                playerlabel1.Text = player1.GetName() + " heeft: " + player1.GetMoney() + " euro in totaal.";
-                                playerlabel2.Text = player2.GetName() + " heeft: " + player2.GetMoney() + " euro in totaal.";
-                                playerlabel3.Text = player3.GetName() + " heeft: " + player3.GetMoney() + " euro in totaal.";
+                                if (Guylist[j].GetKitten() == 4)
+                                {
+                                    Guylist[j].Win();
+                                    playerlabel1.Text = player1.GetName() + " heeft: " + player1.GetMoney() + " euro in totaal.";
+                                    playerlabel2.Text = player2.GetName() + " heeft: " + player2.GetMoney() + " euro in totaal.";
+                                    playerlabel3.Text = player3.GetName() + " heeft: " + player3.GetMoney() + " euro in totaal.";
+                                }
                             }
                         }
-                    }
-                    else if (i == 3)
-                    {
-                        label1.Text = "Kat 4 heeft gewonnen";
-                        label1.BackColor = Color.FromArgb(252, 159, 86);
-                        for (int j = 0; j < Guylist.Length; j++)
+                        else if (i == 2)
                         {
-                            if (Guylist[j].GetKitten() == 2)
+                            label1.Text = "Kat 3 heeft gewonnen";
+                            label1.BackColor = Color.FromArgb(255, 105, 100);
+                            for (int j = 0; j < Guylist.Length; j++)
                             {
-                                Guylist[j].Win();
-                                playerlabel1.Text = player1.GetName() + " heeft: " + player1.GetMoney() + " euro in totaal.";
-                                playerlabel2.Text = player2.GetName() + " heeft: " + player2.GetMoney() + " euro in totaal.";
-                                playerlabel3.Text = player3.GetName() + " heeft: " + player3.GetMoney() + " euro in totaal.";
+                                if (Guylist[j].GetKitten() == 3)
+                                {
+                                    Guylist[j].Win();
+                                    playerlabel1.Text = player1.GetName() + " heeft: " + player1.GetMoney() + " euro in totaal.";
+                                    playerlabel2.Text = player2.GetName() + " heeft: " + player2.GetMoney() + " euro in totaal.";
+                                    playerlabel3.Text = player3.GetName() + " heeft: " + player3.GetMoney() + " euro in totaal.";
+                                }
                             }
                         }
-                    }
-                    else if (i == 4)
-                    {
-                        label1.Text = "Kat 5 heeft gewonnen";
-                        label1.BackColor = Color.FromArgb(245, 79, 139);
-                        for (int j = 0; j < Guylist.Length; j++)
+                        else if (i == 3)
                         {
-                            if (Guylist[j].GetKitten() == 1)
+                            label1.Text = "Kat 4 heeft gewonnen";
+                            label1.BackColor = Color.FromArgb(252, 159, 86);
+                            for (int j = 0; j < Guylist.Length; j++)
                             {
-                                Guylist[j].Win();
-                                playerlabel1.Text = player1.GetName() + " heeft: " + player1.GetMoney() + " euro in totaal.";
-                                playerlabel2.Text = player2.GetName() + " heeft: " + player2.GetMoney() + " euro in totaal.";
-                                playerlabel3.Text = player3.GetName() + " heeft: " + player3.GetMoney() + " euro in totaal.";
+                                if (Guylist[j].GetKitten() == 2)
+                                {
+                                    Guylist[j].Win();
+                                    playerlabel1.Text = player1.GetName() + " heeft: " + player1.GetMoney() + " euro in totaal.";
+                                    playerlabel2.Text = player2.GetName() + " heeft: " + player2.GetMoney() + " euro in totaal.";
+                                    playerlabel3.Text = player3.GetName() + " heeft: " + player3.GetMoney() + " euro in totaal.";
+                                }
+                            }
+                        }
+                        else if (i == 4)
+                        {
+                            label1.Text = "Kat 5 heeft gewonnen";
+                            label1.BackColor = Color.FromArgb(245, 79, 139);
+                            for (int j = 0; j < Guylist.Length; j++)
+                            {
+                                if (Guylist[j].GetKitten() == 1)
+                                {
+                                    Guylist[j].Win();
+                                    playerlabel1.Text = player1.GetName() + " heeft: " + player1.GetMoney() + " euro in totaal.";
+                                    playerlabel2.Text = player2.GetName() + " heeft: " + player2.GetMoney() + " euro in totaal.";
+                                    playerlabel3.Text = player3.GetName() + " heeft: " + player3.GetMoney() + " euro in totaal.";
+                                }
                             }
                         }
                     }
+                }
+                do
+                {
+                    for (int i = 0; i < amountCats; i++)
+                    {
+                        temp = cat[i].Run();
+                    }
+                    for (int i = 0; i < amountCats; i++)
+                    {
+                        temp = 0;
+                        if (!cat[i].GetStop())
+                        {
+                            temp = cat[i].Run();
+                        }
+                        if (i == 0)
+                        {
+                            temp += pictureBox3.Location.X;
+                            pictureBox3.Location = new Point(temp, pictureBox3.Location.Y);
+                        }
+                        else if (i == 1)
+                        {
+                            temp += pictureBox4.Location.X;
+                            pictureBox4.Location = new Point(temp, pictureBox4.Location.Y);
+                        }
+                        else if (i == 2)
+                        {
+                            temp += pictureBox5.Location.X;
+                            pictureBox5.Location = new Point(temp, pictureBox5.Location.Y);
+                        }
+                        else if (i == 3)
+                        {
+                            temp += pictureBox6.Location.X;
+                            pictureBox6.Location = new Point(temp, pictureBox6.Location.Y);
+                        }
+                        else if (i == 4)
+                        {
+                            temp += pictureBox7.Location.X;
+                            pictureBox7.Location = new Point(temp, pictureBox7.Location.Y);
+                        }
+                        Application.DoEvents();
+                        if (temp >= 1600)
+                        {
+                            if (i == 0)
+                            {
+                                pictureBox3.Location = new Point(0, pictureBox3.Location.Y);
+                            }
+                            else if (i == 1)
+                            {
+                                pictureBox4.Location = new Point(0, pictureBox4.Location.Y);
+                            }
+                            else if (i == 2)
+                            {
+                                pictureBox5.Location = new Point(0, pictureBox5.Location.Y);
+                            }
+                            else if (i == 3)
+                            {
+                                pictureBox6.Location = new Point(0, pictureBox6.Location.Y);
+                            }
+                            else if (i == 4)
+                            {
+                                pictureBox7.Location = new Point(0, pictureBox7.Location.Y);
+                            }
+                        }
+                        else if (cat[i].GetStop())
+                        { }
+                        else if (temp >= 240 && temp <= 300)
+                        {
+                            if (i == 0)
+                            {
+                                pictureBox3.Location = new Point(257, pictureBox3.Location.Y);
+                                cat[i].Stop();
+                            }
+                            else if (i == 1)
+                            {
+                                pictureBox4.Location = new Point(257, pictureBox4.Location.Y);
+                                cat[i].Stop();
+                            }
+                            else if (i == 2)
+                            {
+                                pictureBox5.Location = new Point(257, pictureBox5.Location.Y);
+                                cat[i].Stop();
+                            }
+                            else if (i == 3)
+                            {
+                                pictureBox6.Location = new Point(257, pictureBox6.Location.Y);
+                                cat[i].Stop();
+                            }
+                            else if (i == 4)
+                            {
+                                pictureBox7.Location = new Point(257, pictureBox7.Location.Y);
+                                cat[i].Stop();
+                            }
+                            count++;
+                        }
+                    }
+                    if (count == amountCats)
+                    {
+                        done = true;
+                    }
+                    Application.DoEvents();
+                    temp = 0;
+                } while (!done);
+
+                moneyBed = 5;
+                color = 1;
+                amountCats = 5;
+                count = 0;
+
+                player1bet = false;
+                player2bet = false;
+                player3bet = false;
+                done = false;
+                firts = true;
+                noBet = false;
+                for (int i = 0; i < amountCats; i++)
+                {
+                    cat[i].CanMove();
                 }
             }
         }

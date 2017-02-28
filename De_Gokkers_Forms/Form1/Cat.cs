@@ -24,6 +24,7 @@ namespace Form1
         }
         public int Run()
         {
+            this.stop = false;
             return this.position = this.move.Moved();
         }
         public int Fire(Cat[] Kittens)
@@ -50,6 +51,10 @@ namespace Form1
         {
             this.stop = true;
         }
+        public void CanMove()
+        {
+            this.stop = false;
+        }
         public void HasWon()
         {
             this.won = true;
@@ -61,6 +66,10 @@ namespace Form1
         public int GetPosition()
         {
             return this.position;
+        }
+        public void SETPosition(int position)
+        {
+            this.position = position;
         }
         public bool GetDisqualified()
         {
