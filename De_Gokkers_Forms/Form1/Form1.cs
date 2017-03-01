@@ -287,9 +287,6 @@ namespace Form1
                                 if (Guylist[j].GetKitten() == 5)
                                 {
                                     Guylist[j].Win();
-                                    playerlabel1.Text = player1.GetName() + " heeft: " + player1.GetMoney() + " euro in totaal.";
-                                    playerlabel2.Text = player2.GetName() + " heeft: " + player2.GetMoney() + " euro in totaal.";
-                                    playerlabel3.Text = player3.GetName() + " heeft: " + player3.GetMoney() + " euro in totaal.";
                                 }
                             }
                         }
@@ -302,9 +299,6 @@ namespace Form1
                                 if (Guylist[j].GetKitten() == 4)
                                 {
                                     Guylist[j].Win();
-                                    playerlabel1.Text = player1.GetName() + " heeft: " + player1.GetMoney() + " euro in totaal.";
-                                    playerlabel2.Text = player2.GetName() + " heeft: " + player2.GetMoney() + " euro in totaal.";
-                                    playerlabel3.Text = player3.GetName() + " heeft: " + player3.GetMoney() + " euro in totaal.";
                                 }
                             }
                         }
@@ -317,9 +311,6 @@ namespace Form1
                                 if (Guylist[j].GetKitten() == 3)
                                 {
                                     Guylist[j].Win();
-                                    playerlabel1.Text = player1.GetName() + " heeft: " + player1.GetMoney() + " euro in totaal.";
-                                    playerlabel2.Text = player2.GetName() + " heeft: " + player2.GetMoney() + " euro in totaal.";
-                                    playerlabel3.Text = player3.GetName() + " heeft: " + player3.GetMoney() + " euro in totaal.";
                                 }
                             }
                         }
@@ -332,9 +323,6 @@ namespace Form1
                                 if (Guylist[j].GetKitten() == 2)
                                 {
                                     Guylist[j].Win();
-                                    playerlabel1.Text = player1.GetName() + " heeft: " + player1.GetMoney() + " euro in totaal.";
-                                    playerlabel2.Text = player2.GetName() + " heeft: " + player2.GetMoney() + " euro in totaal.";
-                                    playerlabel3.Text = player3.GetName() + " heeft: " + player3.GetMoney() + " euro in totaal.";
                                 }
                             }
                         }
@@ -347,12 +335,10 @@ namespace Form1
                                 if (Guylist[j].GetKitten() == 1)
                                 {
                                     Guylist[j].Win();
-                                    playerlabel1.Text = player1.GetName() + " heeft: " + player1.GetMoney() + " euro in totaal.";
-                                    playerlabel2.Text = player2.GetName() + " heeft: " + player2.GetMoney() + " euro in totaal.";
-                                    playerlabel3.Text = player3.GetName() + " heeft: " + player3.GetMoney() + " euro in totaal.";
                                 }
                             }
                         }
+                        RefreshForm();
                     }
                 }
                 do
@@ -473,6 +459,16 @@ namespace Form1
                     cat[i].CanMove();
                 }
             }
+        }
+
+        private void RefreshForm()
+        {
+            playerlabel1.Text = player1.GetName() + " heeft: " + player1.GetMoney() + " euro in totaal.\n ";
+            playerlabel2.Text = player2.GetName() + " heeft: " + player2.GetMoney() + " euro in totaal.\n ";
+            playerlabel3.Text = player3.GetName() + " heeft: " + player3.GetMoney() + " euro in totaal.\n ";
+            player1bet = false;
+            player2bet = false;
+            player3bet = false;
         }
     }
 }

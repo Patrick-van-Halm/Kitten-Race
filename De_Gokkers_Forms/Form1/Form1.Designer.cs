@@ -83,7 +83,7 @@
             this.WedtPanel.Controls.Add(this.playerRadio1);
             this.WedtPanel.Location = new System.Drawing.Point(0, 0);
             this.WedtPanel.Name = "WedtPanel";
-            this.WedtPanel.Size = new System.Drawing.Size(251, 800);
+            this.WedtPanel.Size = new System.Drawing.Size(251, 788);
             this.WedtPanel.TabIndex = 0;
             // 
             // ColorChoose
@@ -311,7 +311,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.ClientSize = new System.Drawing.Size(1350, 729);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
