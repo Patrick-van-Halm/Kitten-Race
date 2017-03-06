@@ -123,6 +123,7 @@ namespace Form1
                 player3.Bet(int.Parse(MoneyBedLabel.Text), color);
                 playerlabel3.Text = player3.GetName() + " heeft: " + player3.GetMoney() + " euro in totaal.\n" + player3.GetName() + " wedt " + player3.GetBet() + " euro op kat " + player3.GetKitten() + ".";
             }
+            go.Enabled = true;
         }
 
         private void go_Click(object sender, EventArgs e)
@@ -466,7 +467,6 @@ namespace Form1
                         cat[i].CanMove();
                     }
             }
-            go.Enabled = true;
         }
 
         private void RefreshForm()

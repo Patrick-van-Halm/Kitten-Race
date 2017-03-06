@@ -135,6 +135,7 @@
             this.go.Text = "GO";
             this.go.UseVisualStyleBackColor = true;
             this.go.Click += new System.EventHandler(this.go_Click);
+            this.go.Enabled = false;
             // 
             // wedt
             // 
