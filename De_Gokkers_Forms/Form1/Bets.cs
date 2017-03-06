@@ -6,32 +6,40 @@ using System.Threading.Tasks;
 
 namespace Form1
 {
-    class Bets
+    class Bet
     {
-        protected int bet;
         protected int kitten;
-        protected int money;
+        protected int betMoney;
+        protected Guy bettor;
 
-        public Bets(int money)
+        public Bet(Guy bettor)
         {
-            this.money = money;
+            this.bettor = bettor;
         }
 
-        public void Bet(int bet, int kitten)
+        public void BetMoney(int bet, int kitten)
         {
-            this.bet = bet;
+            if (kitten == 5)
+                kitten = 1;
+            else if (kitten == 4)
+                kitten = 2;
+            else if (kitten == 2)
+                kitten = 4;
+            else if (kitten == 1)
+                kitten = 5;
+            this.betMoney = bet;
             this.kitten = kitten;
-            this.money -= bet;
+            bettor.SetMoney(bettor.GetMoney() - bet);
         }
 
         public void Win()
         {
-            this.money += 2 * bet;
+            bettor.SetMoney(bettor.GetMoney() + 2 * this.betMoney);
         }
 
-        public int GetBet()
+        public int GetBetMoney()
         {
-            return this.bet;
+            return this.betMoney;
         }
 
         public int GetKitten()

@@ -96,7 +96,7 @@
             0,
             0});
             this.ColorChoose.Name = "ColorChoose";
-            this.ColorChoose.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ColorChoose.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ColorChoose.Size = new System.Drawing.Size(18, 47);
             this.ColorChoose.TabIndex = 16;
             this.ColorChoose.Value = new decimal(new int[] {

@@ -23,10 +23,10 @@ namespace Form1
         int count = 0;
         int countgames = 0;
 
-        Guys player1;
-        Guys player2;
-        Guys player3;
-        Guys[] Guylist = new Guys[3];
+        Guy player1;
+        Guy player2;
+        Guy player3;
+        Guy[] Guylist = new Guy[3];
 
         bool player1bet = false;
         bool player2bet = false;
@@ -50,9 +50,9 @@ namespace Form1
             label1.Text = "";
             MoneyBedLabel.Text = "" + moneyBed;
             ColorBox.BackColor = Color.FromArgb(115, 225, 223);
-            player1 = new Guys("Sietse", 100);
-            player2 = new Guys("Fer", 100);
-            player3 = new Guys("Lidy", 100);
+            player1 = new Guy("Sietse", 100);
+            player2 = new Guy("Fer", 100);
+            player3 = new Guy("Lidy", 100);
             Guylist[0] = player1;
             Guylist[1] = player2;
             Guylist[2] = player3;
@@ -90,15 +90,15 @@ namespace Form1
                 ColorChoose.Value = 5;
             color = (int)ColorChoose.Value;
 
-            if (color == 1)
+            if (color == 5)
                 ColorBox.BackColor = Color.FromArgb(115, 225, 223);
-            else if (color == 2)
+            else if (color == 4)
                 ColorBox.BackColor = Color.FromArgb(79, 70, 245);
             else if (color == 3)
                 ColorBox.BackColor = Color.FromArgb(255, 105, 100);
-            else if (color == 4)
+            else if (color == 2)
                 ColorBox.BackColor = Color.FromArgb(252, 159, 86);
-            else if (color == 5)
+            else if (color == 1)
                 ColorBox.BackColor = Color.FromArgb(245, 79, 139);
         }
 
@@ -107,20 +107,20 @@ namespace Form1
             if (playerRadio1.Checked && !player1bet)
             {
                 player1bet = true;
-                player1.Bet(int.Parse(MoneyBedLabel.Text), color);
-                playerlabel1.Text = player1.GetName() + " heeft: " + player1.GetMoney() + " euro in totaal.\n" + player1.GetName() + " wedt " + player1.GetBet() + " euro op kat " + player1.GetKitten() + ".";
+                player1.GetBettor().BetMoney(int.Parse(MoneyBedLabel.Text), color);
+                playerlabel1.Text = player1.GetName() + " heeft: " + player1.GetMoney() + " euro in totaal.\n" + player1.GetName() + " wedt " + player1.GetBettor().GetBetMoney() + " euro op kat " + player1.GetBettor().GetKitten() + ".";
             }
             else if (playerRadio2.Checked && !player2bet)
             {
                 player2bet = true;
-                player2.Bet(int.Parse(MoneyBedLabel.Text), color);
-                playerlabel2.Text = player2.GetName() + " heeft: " + player2.GetMoney() + " euro in totaal.\n" + player2.GetName() + " wedt " + player2.GetBet() + " euro op kat " + player2.GetKitten() + ".";
+                player2.GetBettor().BetMoney(int.Parse(MoneyBedLabel.Text), color);
+                playerlabel2.Text = player2.GetName() + " heeft: " + player2.GetMoney() + " euro in totaal.\n" + player2.GetName() + " wedt " + player2.GetBettor().GetBetMoney() + " euro op kat " + player2.GetBettor().GetKitten() + ".";
             }
             else if (playerRadio3.Checked && !player3bet)
             {
                 player3bet = true;
-                player3.Bet(int.Parse(MoneyBedLabel.Text), color);
-                playerlabel3.Text = player3.GetName() + " heeft: " + player3.GetMoney() + " euro in totaal.\n" + player3.GetName() + " wedt " + player3.GetBet() + " euro op kat " + player3.GetKitten() + ".";
+                player3.GetBettor().BetMoney(int.Parse(MoneyBedLabel.Text), color);
+                playerlabel3.Text = player3.GetName() + " heeft: " + player3.GetMoney() + " euro in totaal.\n" + player3.GetName() + " wedt " + player3.GetBettor().GetBetMoney() + " euro op kat " + player3.GetBettor().GetKitten() + ".";
             }
             go.Enabled = true;
         }
@@ -287,9 +287,9 @@ namespace Form1
                                 label1.BackColor = Color.FromArgb(115, 225, 223);
                                 for (int j = 0; j < Guylist.Length; j++)
                                 {
-                                    if (Guylist[j].GetKitten() == 1)
+                                    if (Guylist[j].GetBettor().GetKitten() == 1)
                                     {
-                                        Guylist[j].Win();
+                                        Guylist[j].GetBettor().Win();
                                     }
                                 }
                             }
@@ -299,9 +299,9 @@ namespace Form1
                                 label1.BackColor = Color.FromArgb(79, 70, 245);
                                 for (int j = 0; j < Guylist.Length; j++)
                                 {
-                                    if (Guylist[j].GetKitten() == 2)
+                                    if (Guylist[j].GetBettor().GetKitten() == 2)
                                     {
-                                        Guylist[j].Win();
+                                        Guylist[j].GetBettor().Win();
                                     }
                                 }
                             }
@@ -311,9 +311,9 @@ namespace Form1
                                 label1.BackColor = Color.FromArgb(255, 105, 100);
                                 for (int j = 0; j < Guylist.Length; j++)
                                 {
-                                    if (Guylist[j].GetKitten() == 3)
+                                    if (Guylist[j].GetBettor().GetKitten() == 3)
                                     {
-                                        Guylist[j].Win();
+                                        Guylist[j].GetBettor().Win();
                                     }
                                 }
                             }
@@ -323,9 +323,9 @@ namespace Form1
                                 label1.BackColor = Color.FromArgb(252, 159, 86);
                                 for (int j = 0; j < Guylist.Length; j++)
                                 {
-                                    if (Guylist[j].GetKitten() == 4)
+                                    if (Guylist[j].GetBettor().GetKitten() == 4)
                                     {
-                                        Guylist[j].Win();
+                                        Guylist[j].GetBettor().Win();
                                     }
                                 }
                             }
@@ -335,9 +335,9 @@ namespace Form1
                                 label1.BackColor = Color.FromArgb(245, 79, 139);
                                 for (int j = 0; j < Guylist.Length; j++)
                                 {
-                                    if (Guylist[j].GetKitten() == 5)
+                                    if (Guylist[j].GetBettor().GetKitten() == 5)
                                     {
-                                        Guylist[j].Win();
+                                        Guylist[j].GetBettor().Win();
                                     }
                                 }
                             }

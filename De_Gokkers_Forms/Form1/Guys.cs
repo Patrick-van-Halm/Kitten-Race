@@ -6,25 +6,40 @@ using System.Threading.Tasks;
 
 namespace Form1
 {
-    class Guys : Bets
+    class Guy
     {
+        Bet myBet;
         string name;
+        int money;
 
-        public Guys(string name, int money = 50) : base(money)
+        public Guy(string name, int money = 50)
         {
             this.name = name;
+            this.money = money;
+            myBet = new Bet(this);
         }
 
         //Methods
+
+
+        public void SetMoney(int money)
+        {
+            this.money = money;
+        }
+
+        public int GetMoney()
+        {
+            return this.money;
+        }
 
         public string GetName()
         {
             return this.name;
         }
 
-        public int GetMoney()
+        public Bet GetBettor()
         {
-            return money;
+            return myBet;
         }
     }
 }
