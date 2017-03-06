@@ -91,16 +91,15 @@ namespace Form1
             color = (int)ColorChoose.Value;
 
             if (color == 1)
-                ColorBox.BackColor = Color.FromArgb(245, 79, 139);
-            else if(color == 2)
-                ColorBox.BackColor = Color.FromArgb(252, 159, 86);
+                ColorBox.BackColor = Color.FromArgb(115, 225, 223);
+            else if (color == 2)
+                ColorBox.BackColor = Color.FromArgb(79, 70, 245);
             else if (color == 3)
                 ColorBox.BackColor = Color.FromArgb(255, 105, 100);
             else if (color == 4)
-                ColorBox.BackColor = Color.FromArgb(79, 70, 245);
+                ColorBox.BackColor = Color.FromArgb(252, 159, 86);
             else if (color == 5)
-                ColorBox.BackColor = Color.FromArgb(115, 225, 223);
-
+                ColorBox.BackColor = Color.FromArgb(245, 79, 139);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -288,7 +287,7 @@ namespace Form1
                                 label1.BackColor = Color.FromArgb(115, 225, 223);
                                 for (int j = 0; j < Guylist.Length; j++)
                                 {
-                                    if (Guylist[j].GetKitten() == 5)
+                                    if (Guylist[j].GetKitten() == 1)
                                     {
                                         Guylist[j].Win();
                                     }
@@ -300,7 +299,7 @@ namespace Form1
                                 label1.BackColor = Color.FromArgb(79, 70, 245);
                                 for (int j = 0; j < Guylist.Length; j++)
                                 {
-                                    if (Guylist[j].GetKitten() == 4)
+                                    if (Guylist[j].GetKitten() == 2)
                                     {
                                         Guylist[j].Win();
                                     }
@@ -324,7 +323,7 @@ namespace Form1
                                 label1.BackColor = Color.FromArgb(252, 159, 86);
                                 for (int j = 0; j < Guylist.Length; j++)
                                 {
-                                    if (Guylist[j].GetKitten() == 2)
+                                    if (Guylist[j].GetKitten() == 4)
                                     {
                                         Guylist[j].Win();
                                     }
@@ -336,7 +335,7 @@ namespace Form1
                                 label1.BackColor = Color.FromArgb(245, 79, 139);
                                 for (int j = 0; j < Guylist.Length; j++)
                                 {
-                                    if (Guylist[j].GetKitten() == 1)
+                                    if (Guylist[j].GetKitten() == 5)
                                     {
                                         Guylist[j].Win();
                                     }
@@ -455,7 +454,10 @@ namespace Form1
                     color = 1;
                     amountCats = 5;
                     count = 0;
-
+                for (int i = 0; i < amountCats; i++)
+                {
+                    cat[i].ResetCat();
+                }
                     player1bet = false;
                     player2bet = false;
                     player3bet = false;

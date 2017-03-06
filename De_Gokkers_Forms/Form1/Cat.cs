@@ -27,6 +27,10 @@ namespace Form1
             this.stop = false;
             return this.position = this.move.Moved();
         }
+        public void ResetCat()
+        {
+            this.won = false;
+        }
         public int Fire(Cat[] Kittens)
         {
             int temp = 0;
