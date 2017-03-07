@@ -21,7 +21,7 @@ namespace Form1
         int color = 1;
         int amountCats = 5;
         int count = 0;
-        int countgames = 0;
+        int countmove = 0;
         int countrount = 0;
 
         Guy player1;
@@ -128,6 +128,7 @@ namespace Form1
 
         private void go_Click(object sender, EventArgs e)
         {
+            wedt.Enabled = false;
             countrount++;
             go.Enabled = false;
             int temp;
@@ -141,8 +142,14 @@ namespace Form1
                 }
                 if (countrount == 2)
                 {
-                    
-                    count++;
+                    countmove++;
+                }
+                if (countmove == 50)
+                {
+                    cat[2].Fire();
+                    cat[1].SetIsAlive();
+                    this.pictureBox2.Visible = true;
+                    Application.DoEvents();
                 }
                 for (int i = 0; i < amountCats; i++)
                 {
@@ -161,7 +168,7 @@ namespace Form1
                                     cat[i].HasWon();
                                 }
                                 count++;
-                                if (count == 5)
+                                if ((count == 5) || (count == 3 && countrount > 1))
                                 {
                                     done = true;
                                 }
@@ -181,7 +188,7 @@ namespace Form1
                                     cat[i].HasWon();
                                 }
                                 count++;
-                                if (count == 5)
+                                if ((count == 5) || (count == 3 && countrount > 1))
                                 {
                                     done = true;
                                 }
@@ -201,7 +208,7 @@ namespace Form1
                                     cat[i].HasWon();
                                 }
                                 count++;
-                                if (count == 5)
+                                if ((count == 5) || (count == 3 && countrount > 1))
                                 {
                                     done = true;
                                 }
@@ -221,7 +228,7 @@ namespace Form1
                                     cat[i].HasWon();
                                 }
                                 count++;
-                                if (count == 5)
+                                if ((count == 5) || (count == 3 && countrount > 1))
                                 {
                                     done = true;
                                 }
@@ -241,7 +248,7 @@ namespace Form1
                                     cat[i].HasWon();
                                 }
                                 count++;
-                                if (count == 5)
+                                if ((count == 5)||(count == 3 && countrount > 1))
                                 {
                                     done = true;
                                 }
@@ -280,7 +287,7 @@ namespace Form1
             done = false;
             if (!noBet)
             {
-                    countgames++;
+                    countmove++;
                     count = 0;
                     //label1.Text = "RONDE WIN:";
                     for (int i = 0; i < amountCats; i++)
@@ -470,10 +477,13 @@ namespace Form1
                     done = false;
                     firts = true;
                     noBet = false;
+                    count = 0;
+                wedt.Enabled = true;
                     for (int i = 0; i < amountCats; i++)
                     {
                         cat[i].CanMove();
                     }
+                this.pictureBox2.Visible = false;
             }
         }
 

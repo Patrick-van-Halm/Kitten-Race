@@ -19,14 +19,7 @@ namespace Form1
 
         public void BetMoney(int bet, int kitten)
         {
-            if (kitten == 5)
-                kitten = 1;
-            else if (kitten == 4)
-                kitten = 2;
-            else if (kitten == 2)
-                kitten = 4;
-            else if (kitten == 1)
-                kitten = 5;
+            
             this.betMoney = bet;
             this.kitten = kitten;
             bettor.SetMoney(bettor.GetMoney() - bet);

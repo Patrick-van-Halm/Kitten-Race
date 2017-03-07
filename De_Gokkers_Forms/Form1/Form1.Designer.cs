@@ -50,6 +50,7 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.WedtPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ColorChoose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BedMoney)).BeginInit();
@@ -60,6 +61,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // WedtPanel
@@ -128,6 +130,7 @@
             // 
             // go
             // 
+            this.go.Enabled = false;
             this.go.Location = new System.Drawing.Point(83, 497);
             this.go.Name = "go";
             this.go.Size = new System.Drawing.Size(75, 23);
@@ -135,7 +138,6 @@
             this.go.Text = "GO";
             this.go.UseVisualStyleBackColor = true;
             this.go.Click += new System.EventHandler(this.go_Click);
-            this.go.Enabled = false;
             // 
             // wedt
             // 
@@ -307,12 +309,23 @@
             this.pictureBox7.TabIndex = 6;
             this.pictureBox7.TabStop = false;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(884, 227);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(200, 200);
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1350, 729);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
@@ -340,6 +353,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -368,6 +382,7 @@
         private System.Windows.Forms.Button wedt;
         private System.Windows.Forms.NumericUpDown BedMoney;
         private System.Windows.Forms.NumericUpDown ColorChoose;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

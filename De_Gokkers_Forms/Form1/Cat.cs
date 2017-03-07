@@ -31,25 +31,9 @@ namespace Form1
         {
             this.won = false;
         }
-        public int Fire(Cat[] Kittens)
+        public void Fire()
         {
-            int temp = 0;
-            for (int i = 0; i < Kittens.Length; i++)
-            {
-                if (Kittens[i].GetPosition()>= temp)
-                {
-                    temp = Kittens[i].GetPosition();
-                }
-             }
-            for (int i = 0; i < Kittens.Length; i++)
-            {
-                if (temp == Kittens[i].GetPosition())
-                {
-                    this.disqualified = true;
-                    return i;
-                }
-            }
-            return 0;
+            this.disqualified = true;
         }
         public void Stop()
         {
