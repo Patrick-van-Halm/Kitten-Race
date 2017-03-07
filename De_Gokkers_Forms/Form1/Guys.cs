@@ -37,7 +37,7 @@ namespace Form1
             return this.name;
         }
 
-        public Bet GetBettor()
+        public Bet GetBet()
         {
             return myBet;
         }
